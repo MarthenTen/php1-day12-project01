@@ -8,8 +8,6 @@
 
     $query = mysqli_query ($conn, "SELECT * FROM produk where id='$id' LIMIT 1");
     $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
-
-
     ?>
 
 
