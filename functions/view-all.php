@@ -4,7 +4,7 @@
 
 // membuat perintah sql
 $sql = "SELECT id, kategori, judul, harga FROM produk";
-$result = $connection->query($sql);
+$result = $conn->query($sql);
 
 
 

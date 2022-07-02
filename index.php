@@ -6,14 +6,17 @@ require_once('./config/conection.php');
 
 
 
+
+
+
 //Site Info
 require_once('./config/site_info.php');
 
-// intearsi functions
 
-// views all
-// menampilka semua data dari database
+
+
 require_once('./functions/view-all.php');
+
 
 ?>
 
@@ -30,17 +33,36 @@ require_once('./functions/view-all.php');
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
 </head>
-<body class="bg-light p-3">
+<body class="bg-light p-3 ">
 
-    <div class="container bg-dark text-light rounded shadow p-4   ">
-    
-        <h1 class="text-warning fw-bolder">   <?php echo $site_title; ?></h1>
-        <p>  <?php echo $site_tag_line; ?></p>
-        <small class="test-secondary">
-        <i>  <?php echo $site_description; ?></i>
-        </small>
+    <div class="container bg-dark text-light rounded shadow p-4  ">
+        <div class="row  d-flex justify-content-between  ">
+            <div class="col-6">
+                <h1 class="text-warning fw-bolder">   <?php echo $site_title; ?></h1>
+                <p>  <?php echo $site_tag_line; ?></p>
+                <small class="test-secondary">
+                <i>  <?php echo $site_description; ?></i>
+                </small>
 
+             </div>
+
+             <div class="col-6 text-end ">
+
+        <div class="p-2"><a class="test-secondary btn btn-warning btn-small" href="./views/dasbor.php">Dasbord</a>
+                       
+                
+                   
+</div>
+
+
+                    
+
+              
+   
+             </div>
+        </div> 
     </div>
+
 
     <!--  CONTENT -->
 
@@ -48,7 +70,7 @@ require_once('./functions/view-all.php');
     <div class="container p-5">
         <!-- .row -->
         <div class="row">
-<?php if($result->num_rows > 0){while($row = $result->fetch_assoc()){ ?>
+ <?php if($result->num_rows > 0){while($row = $result->fetch_assoc()){ ?>
 
             <!-- .col -->
             <div class="col-lg-4 mb-4">
@@ -60,9 +82,9 @@ require_once('./functions/view-all.php');
                         <h3 class="text-warning"><?php echo $row['judul']; ?></h3>
                     </div>
                     <!-- end card body -->
-                    <div class="card-footer d-flex justify-content-between">
+                    <div class="card-footer d-flex justify-content-between ">
                         <div class ="fw-bolder fs-4">                     
-                      <?php echo 'Rp. ' . number_format($row['harga'], 2,',','.'); ?>
+                                 <?php echo 'Rp. ' . number_format($row['harga'], 2,',','.'); ?>
                         </div>
                         <div>
                             <a href="#" class="btn btn-warning btn-small">Beli</a>
@@ -73,7 +95,8 @@ require_once('./functions/view-all.php');
             </div>
             <!-- end card -->
             <!-- end .col -->
-<?php }}  ?>
+   <?php }}  ?>
+ 
 
         </div>
         <!-- end .row -->
