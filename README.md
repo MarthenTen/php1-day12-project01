@@ -1,5 +1,5 @@
 # php1-day12-project01
-[![alt text]  https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white ]()
+![alt text](  https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white )
 
 # Struktur Folder
     📦php1-day12-project01
